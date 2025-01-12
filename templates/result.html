@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReLU Activation Function - Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+
+    <h1>ReLU Activation Function - Results</h1>
+
+    <h3>ReLU Output:</h3>
+
+    <!-- Table to display the input and output values -->
+    <table id="output-table" border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Input Value</th>
+                <th>ReLU Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for input_value, output_value in result %}
+            <tr>
+                <td>{{ input_value }}</td>
+                <td>{{ output_value }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br><br>
+    <a href="/">Back to Input Page</a>
+
+</body>
+</html>
